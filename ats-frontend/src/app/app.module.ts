@@ -10,12 +10,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LogInComponent
+    LogInComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
     FlexLayoutModule ,
     FormsModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

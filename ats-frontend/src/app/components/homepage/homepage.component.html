@@ -1,0 +1,17 @@
+<form [formGroup]="myForm">
+    <div class="dropzone" appDnd>
+        <div class = "form-group">
+            <input type="file"   
+                formControlName="file"
+                id="file" 
+                type="file" 
+                class="form-control"
+                (change)="onFileChange($event)"/>
+            
+            <img>
+            <h3>Drag and drop file here</h3>
+            <h3>or</h3>
+            <label for="fileDropRef">Browse file for here</label>
+        </div>
+    </div>
+</form>
