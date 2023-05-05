@@ -23,8 +23,7 @@ export class ChatgptComponent {
     selectedValue: string | undefined;
     variable: string | undefined;
     options: Option[] = [
-      {value: 'ResumeOptimising', viewValue: 'Need suggestions for optimising your Resume?'},
-      {value: 'Skills Required', viewValue: 'Need skills suggestion for any particular job?'},
+      {value: 'Skills Required', viewValue: 'Need skills suggestion for any particular job?'}
     ];
     public Jobs : any = [];
 
