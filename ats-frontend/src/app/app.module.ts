@@ -12,13 +12,15 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatgptComponent } from './components/chatgpt/chatgpt.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LogInComponent,
-    HomepageComponent
+    HomepageComponent,
+    ChatgptComponent
   ],
   imports: [
     BrowserModule,
