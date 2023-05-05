@@ -19,10 +19,17 @@
             <div class="button"> 
                 <mat-form-field>
                     <mat-label>Job Title</mat-label>
-                    <input matInput [(ngModel)]="jobTitle" placeholder="Ex. Java Developer" name="jobTitle">
+                    <input matInput [(ngModel)]="variable" placeholder="Ex. Java Developer" name="variable">
                   </mat-form-field>
-                <button mat-button name="enter" color="primary">Enter</button>
+                <button mat-button name="enter" color="primary" (click)="getMessage(variable)">Enter</button>
             </div>
         </div>
     </form>
 </main>
+
+<!-- <div *ngFor="let dat of Jobs">
+    {{dat['content']}}
+</div> -->
+<div *ngIf="JobsDone">
+  {{Jobs[1]['content']}}
+</div>

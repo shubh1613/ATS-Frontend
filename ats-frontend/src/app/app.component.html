@@ -6,6 +6,8 @@
     <a *ngIf="!authdone" mat-button routerLink="login" routerLinkActive="active">Log in</a>
     <a *ngIf="!authdone" mat-button routerLink="register" routerLinkActive="active">Register</a>
     <a *ngIf="authdone" mat-button routerLink="homepage" routerLinkActive="active">Home</a>
+    <a *ngIf="authdone" mat-button routerLink="chatgpt" routerLinkActive="active">Bot</a>
+
   </span>
   <!-- <a *ngIf="authdone" mat-button routerLink="login" routerLinkActive="active">Logout</a> -->
 </mat-toolbar>
