@@ -14,6 +14,11 @@ export class HomepageComponent {
       fileSource: new FormControl('', [Validators.required])
     });
 
+    jobs  = null;
+    data = [];
+    showjobs = false;
+    formshow = true;
+    progressbar = false;
     //constructor
     constructor(private http: HttpClient) { }
 
@@ -39,15 +44,22 @@ export class HomepageComponent {
     }
     
   } 
-
+  public Jobs : any = [];
   submit(file: string | Blob){
+    this.progressbar =  true;
+    this.formshow = false;
     if(this.myForm.get('fileSource')){
         let formData = new FormData();
         formData.append('file', file);
         this.http.post('http://localhost:4000/upload', formData)
           .subscribe(res => {
-            console.log(res);
-          })
+            
+              this.Jobs = res;
+              this.showjobs = true;
+              this.progressbar = false;
+
+              console.log(this.Jobs.data)
+            })
       }
     }
 }

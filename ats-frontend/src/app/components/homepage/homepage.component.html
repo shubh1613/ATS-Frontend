@@ -1,4 +1,4 @@
-<form [formGroup]="myForm">
+<form [formGroup]="myForm" *ngIf="formshow">
     <div class="dropzone" appDnd>
         <div class = "form-group">
             <input type="file"   
@@ -8,10 +8,38 @@
                 class="form-control"
                 (change)="onFileChange($event)"/>
             
-            <img>
             <h3>Drag and drop file here</h3>
             <h3>or</h3>
             <label for="fileDropRef">Browse file for here</label>
         </div>
     </div>
 </form>
+<div class = "loading" *ngIf="progressbar">
+    <mat-spinner ></mat-spinner>
+</div>
+<div *ngIf="showjobs">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th>Company</th>
+              <th>Job status</th>
+              <th>Job Title</th>
+              <th>Skills</th>
+              <th>Description</th>
+              <th>Location</th>
+              <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dat of Jobs.data">
+                <td>{{dat[0]}}</td>
+                <td>{{dat[1]}}</td>
+                <td>{{dat[2]}}</td>
+                <td>{{dat[3]}}</td>
+                <td class="content hideContent">{{dat[4]}}  <div class="show-more"><a href="#">Show more</a></div></td>
+                <td>{{dat[5]}}</td>
+                <td><a href="{{dat[6]}}">link</a></td>
+            </tr>
+        </tbody>
+      </table>
+</div>
