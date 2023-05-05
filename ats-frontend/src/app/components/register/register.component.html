@@ -1,1 +1,28 @@
-<p>register works!</p>
+<mat-toolbar>
+    <span>Sign-up</span>
+  </mat-toolbar>
+<mat-card class="my-card">
+     <mat-card-content>
+        <form class="my-form">
+           <mat-form-field class="full-width">
+              <mat-label>First Name</mat-label>
+              <input  matInput  placeholder="First Name" name="fname">
+           </mat-form-field>
+           <mat-form-field class="full-width">
+              <mat-label>Last name</mat-label>
+              <input  matInput  placeholder="Last Name" name="lname">
+           </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Email</mat-label>
+                <input  matInput  placeholder="email" name="email">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input  matInput  placeholder="password" name="password">
+            </mat-form-field>
+        </form>
+     </mat-card-content>
+     <mat-card-actions>
+        <button mat-raised-button color="primary">Sign-up</button>
+     </mat-card-actions>
+</mat-card>
