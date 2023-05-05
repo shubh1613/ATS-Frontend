@@ -1,0 +1,28 @@
+<main>
+    <form class="adjust">
+        <mat-form-field appearance="fill" class="adjust">
+            <mat-label>Select</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="option" class="adjust" >
+              <mat-option *ngFor="let option of options" [value]="option.value" class="adjust">
+                {{option.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        <div class="adjust" *ngIf="selectedValue == 'ResumeOptimising'">
+            
+        </div>
+        
+        <div class="adjust" *ngIf="selectedValue == 'Skills Required'">
+            Enter the Job Title: 
+            
+            <div class="button"> 
+                <mat-form-field>
+                    <mat-label>Job Title</mat-label>
+                    <input matInput [(ngModel)]="jobTitle" placeholder="Ex. Java Developer" name="jobTitle">
+                  </mat-form-field>
+                <button mat-button name="enter" color="primary">Enter</button>
+            </div>
+        </div>
+    </form>
+</main>
